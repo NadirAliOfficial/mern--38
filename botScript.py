@@ -96,4 +96,3 @@ def analyze_minute_chart(currency_pair, start_date, reverse=False):
             return {"trade_details": "example"}
 
     return None
-    
