@@ -1,30 +1,56 @@
 # MERN Stack Project
 
-A full-stack web application built with MongoDB, Express, React, and Node.js.
+A full-stack web application built with MongoDB, Express, React, and Node.js featuring user authentication, REST API, and a responsive Tailwind CSS frontend.
+
+## Tech Stack
+
+- **Frontend:** React 18, Vite, Tailwind CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB with Mongoose
+- **Auth:** JWT + bcrypt
 
 ## Features
-- REST API with Express
-- React frontend with component-based architecture
-- MongoDB data persistence
 
-## Setup
+- User registration and login with JWT authentication
+- Protected routes on both frontend and backend
+- RESTful API with full CRUD operations
+- Responsive UI with Tailwind CSS
+
+## Getting Started
+
 ```bash
-# Backend
-cd server && npm install && npm start
+# Install dependencies
+npm install
+cd client && npm install
 
-# Frontend
-cd client && npm install && npm start
+# Set environment variables
+cp .env.example .env
+
+# Run development server
+npm run dev
 ```
 
-## Environment Variables
-Create `.env` in the server directory:
+## API Endpoints
+
+| Method | Route | Description |
+|--------|-------|-------------|
+| POST | /api/auth/register | Register new user |
+| POST | /api/auth/login | Login and get token |
+| GET | /api/users | Get all users (protected) |
+| PUT | /api/users/:id | Update user |
+| DELETE | /api/users/:id | Delete user |
+
+## Project Structure
+
 ```
-MONGO_URI=your_mongodb_uri
-PORT=5000
+├── client/          # React frontend
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   └── App.jsx
+├── server/          # Express backend
+│   ├── routes/
+│   ├── models/
+│   └── index.js
+└── package.json
 ```
-
-## License
-MIT
-<!-- updated: 2026-06-06 -->
-
-
